@@ -14,6 +14,7 @@
 		D9772CC5293036F600E3E4E9 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9772CC4293036F600E3E4E9 /* ListView.swift */; };
 		D9772CC7293087BE00E3E4E9 /* TabViewMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9772CC6293087BE00E3E4E9 /* TabViewMusic.swift */; };
 		D9772CC92930EADE00E3E4E9 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9772CC82930EADE00E3E4E9 /* PlayerView.swift */; };
+		D9772CCB293129C900E3E4E9 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9772CCA293129C900E3E4E9 /* ListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		D9772CC4293036F600E3E4E9 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D9772CC6293087BE00E3E4E9 /* TabViewMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewMusic.swift; sourceTree = "<group>"; };
 		D9772CC82930EADE00E3E4E9 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		D9772CCA293129C900E3E4E9 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				D9772CC82930EADE00E3E4E9 /* PlayerView.swift */,
 				D9772CC22930167100E3E4E9 /* LibraryView.swift */,
 				D9772CC4293036F600E3E4E9 /* ListView.swift */,
+				D9772CCA293129C900E3E4E9 /* ListModel.swift */,
 			);
 			path = AppleMusicSwiftUI;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				D9772CC7293087BE00E3E4E9 /* TabViewMusic.swift in Sources */,
 				D9772CC5293036F600E3E4E9 /* ListView.swift in Sources */,
 				D9772CC32930167100E3E4E9 /* LibraryView.swift in Sources */,
+				D9772CCB293129C900E3E4E9 /* ListModel.swift in Sources */,
 				D9772CC92930EADE00E3E4E9 /* PlayerView.swift in Sources */,
 				D9772CB52930149700E3E4E9 /* AppleMusicSwiftUIApp.swift in Sources */,
 			);
