@@ -12,21 +12,34 @@ struct ListView: View {
     @Environment(\.dismiss) var presentation
 
     var body: some View {
-        NavigationView {
-            List {
+        VStack {
+            NavigationView {
+                List {
+                    ForEach(ListModel.listInfo, id:\.self) {
+                        MediaCell(model: $0)
+                            .listRowSeparator(.visible)
+                    } .onMove(perform: move)
+                }
+                .navigationBarItems(trailing:
+                                        Button(action: {
+                    presentation()
+                }) {
+                    Text("Готово")
+                        .foregroundColor(.pink)
+                })
+                .environment(\.editMode, .constant(.active))
+                .listStyle(.plain)
+                .navigationTitle("Медиатека")
+            } .navigationBarBackButtonHidden(true)
+            PlayerView()
+        }
+    }
 
-            }
-            .navigationBarItems(trailing:
-                                    Button(action: {
-                presentation()
-            }) {
-                Text("Готово")
-                    .foregroundColor(.red)
-            })
-            .navigationTitle("Медиатека")
-        } .navigationBarBackButtonHidden(true)
+    func move(from source: IndexSet, to destination: Int) {
+        ListModel.listInfo.move(fromOffsets: source, toOffset: destination)
     }
 }
+
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
         ListView()

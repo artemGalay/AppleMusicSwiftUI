@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-struct ListModel: Identifiable {
+struct ListModel: Identifiable, Hashable {
     var id = UUID()
     var icon: String
     var name: String
-    var isSelection: Bool?
 
     static var listInfo: [ListModel] = [ListModel(icon: "music.note.list", name: "Плейлисты"),
                                         ListModel(icon: "music.mic", name: "Артисты"),
