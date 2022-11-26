@@ -14,11 +14,13 @@ struct PlayerView: View {
                 .foregroundColor(Color.init(uiColor: .systemGray6))
                 .frame(width: 450, height: 70)
             HStack {
-                Image(systemName: "music.note")
-                    .padding(20)
+                Image("song")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 60, height: 60)
                     .background(Color.init(uiColor: .systemGray5))
                     .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .shadow(radius: 4)
+                    .shadow(radius: 7)
                 Text("Не исполняется")
                     .font(.body)
                     .padding(.leading, 10)
@@ -30,7 +32,11 @@ struct PlayerView: View {
                 Image(systemName: "forward.fill")
                     .resizable()
                     .frame(width: 45, height: 25)
-            }
+            } .overlay(VStack{
+                Divider()
+                .offset(x: 0, y: 34)
+                .frame(width: 450)
+            })
         }
     }
 }
