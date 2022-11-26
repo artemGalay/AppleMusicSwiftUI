@@ -3,8 +3,6 @@
 The project contains two screens
 ## Technology stack
 * SwiftUI
-* MVP
-* CoreData
 
 ## Gif
 ![apple music gif](AppleMusicSwiftUI/Resources/Assets.xcassets/AppleMusicForReadme.gif)
