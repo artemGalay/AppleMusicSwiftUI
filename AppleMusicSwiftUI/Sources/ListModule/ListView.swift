@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ListView: View {
-
+    
     @Environment(\.dismiss) var presentation
-
+    
     var body: some View {
         VStack {
             NavigationView {
                 List {
                     ForEach(ListModel.listInfo, id:\.self) {
-                        MediaCell(model: $0)
+                        ListCell(model: $0)
                             .listRowSeparator(.visible)
                     } .onMove(perform: move)
                 }
@@ -34,7 +34,7 @@ struct ListView: View {
             PlayerView()
         }
     }
-
+    
     func move(from source: IndexSet, to destination: Int) {
         ListModel.listInfo.move(fromOffsets: source, toOffset: destination)
     }

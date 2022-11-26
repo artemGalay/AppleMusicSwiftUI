@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct MediaCell: View {
-
+struct ListCell: View {
+    
     var model: ListModel
     @State private var isShowed = false
-
+    
     var body: some View {
         HStack {
             ZStack {
@@ -32,8 +32,8 @@ struct MediaCell: View {
     }
 }
 
-struct MediaCell_Previews: PreviewProvider {
+struct ListCell_Previews: PreviewProvider {
     static var previews: some View {
-        MediaCell(model: ListModel.listInfo.first ?? ListModel(icon: "none", name: "none"))
+        ListCell(model: ListModel.listInfo.first ?? ListModel(icon: "none", name: "none"))
     }
 }

@@ -32,11 +32,12 @@ struct PlayerView: View {
                 Image(systemName: "forward.fill")
                     .resizable()
                     .frame(width: 45, height: 25)
-            } .overlay(VStack{
-                Divider()
-                .offset(x: 0, y: 34)
-                .frame(width: 450)
-            })
+            } .overlay(
+                VStack{
+                    Divider()
+                        .offset(x: 0, y: 34)
+                        .frame(width: 450)
+                })
         }
     }
 }
