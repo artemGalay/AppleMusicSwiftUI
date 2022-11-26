@@ -7,7 +7,7 @@ The project contains two screens
 * CoreData
 
 ## Gif
-![GifForReadme gif](AppleMusicSwiftUI/AppleMusicSwiftUI/Resources/Assets.xcassets/AppleMusicForReadme.gif)
+![apple music gif](AppleMusicSwiftUI/Resources/Assets.xcassets/AppleMusicForReadme.gif)
 
 ## Requirements
 * iOS 16.1
