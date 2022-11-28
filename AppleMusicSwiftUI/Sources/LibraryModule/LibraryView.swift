@@ -18,8 +18,8 @@ struct LibraryView: View {
                 .multilineTextAlignment(.center)
                 .font(.title3)
                 .foregroundColor(.gray)
-                .padding(.leading, 15)
-                .padding(.trailing, 15)
+                .padding(.leading, Metrics.textPaddingOffset)
+                .padding(.trailing, Metrics.textPaddingOffset)
             Spacer()
             PlayerView()
         }
@@ -29,5 +29,12 @@ struct LibraryView: View {
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
+    }
+}
+
+private extension LibraryView {
+
+    struct Metrics {
+        static let textPaddingOffset: CGFloat = 15
     }
 }

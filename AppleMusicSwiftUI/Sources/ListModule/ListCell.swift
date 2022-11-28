@@ -23,7 +23,7 @@ struct ListCell: View {
                     Image(systemName: "checkmark.circle.fill")
                         .foregroundColor(.pink)
                         .background(Color.white)
-                        .cornerRadius(10)
+                        .cornerRadius(Metrics.imageCornerRadius)
                 }}
             Image(systemName: model.icon)
                 .foregroundColor(.pink)
@@ -35,5 +35,12 @@ struct ListCell: View {
 struct ListCell_Previews: PreviewProvider {
     static var previews: some View {
         ListCell(model: ListModel.listInfo.first ?? ListModel(icon: "none", name: "none"))
+    }
+}
+
+private extension ListCell {
+
+    struct Metrics {
+        static let imageCornerRadius: CGFloat = 10
     }
 }
