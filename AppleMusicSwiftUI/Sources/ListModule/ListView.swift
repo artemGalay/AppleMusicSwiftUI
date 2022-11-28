@@ -35,7 +35,7 @@ struct ListView: View {
         }
     }
     
-    func move(from source: IndexSet, to destination: Int) {
+    private func move(from source: IndexSet, to destination: Int) {
         ListModel.listInfo.move(fromOffsets: source, toOffset: destination)
     }
 }

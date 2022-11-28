@@ -12,31 +12,37 @@ struct PlayerView: View {
         ZStack {
             Rectangle()
                 .foregroundColor(Color.init(uiColor: .systemGray6))
-                .frame(width: 450, height: 70)
+                .frame(width: Metrics.rectangleWigthOffset,
+                       height: Metrics.rectangleHeightOffset)
             HStack {
                 Image("song")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 60, height: 60)
+                    .frame(width: Metrics.songImageWigthHeightOffset,
+                           height: Metrics.songImageWigthHeightOffset)
                     .background(Color.init(uiColor: .systemGray5))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .shadow(radius: 7)
+                    .clipShape(RoundedRectangle(cornerRadius: Metrics.songImageCornerRadiusOffset))
+                    .shadow(radius: Metrics.songImageCornerRadiusOffset)
                 Text("Не исполняется")
                     .font(.body)
-                    .padding(.leading, 10)
+                    .padding(.leading,
+                             Metrics.textPaddingLeadingOffset)
                 Image(systemName: "play.fill")
                     .resizable()
-                    .frame(width: 25, height: 25)
-                    .padding(.trailing, 20)
-                    .padding(.leading, 50)
+                    .frame(width: Metrics.playImageWigthHeightOffset,
+                           height: Metrics.playImageWigthHeightOffset)
+                    .padding(.trailing, Metrics.playImagePaddingTrailingOffset)
+                    .padding(.leading, Metrics.playImagePaddingLeadingOffset)
                 Image(systemName: "forward.fill")
                     .resizable()
-                    .frame(width: 45, height: 25)
+                    .frame(width: Metrics.forwardImageWigthtOffset,
+                           height: Metrics.forwardImageHeightOffset)
             } .overlay(
                 VStack{
                     Divider()
-                        .offset(x: 0, y: 34)
-                        .frame(width: 450)
+                        .offset(x: Metrics.dividerXOffset,
+                                y: Metrics.dividerYOffset)
+                        .frame(width: Metrics.dividerWidthOffset)
                 })
         }
     }
@@ -45,5 +51,29 @@ struct PlayerView: View {
 struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {
         PlayerView()
+    }
+}
+
+private extension PlayerView {
+    
+    struct Metrics {
+        static let rectangleWigthOffset: CGFloat = 450
+        static let rectangleHeightOffset: CGFloat = 70
+        
+        static let songImageWigthHeightOffset: CGFloat = 60
+        static let songImageCornerRadiusOffset: CGFloat = 10
+        
+        static let textPaddingLeadingOffset: CGFloat = 10
+        
+        static let playImageWigthHeightOffset: CGFloat = 25
+        static let playImagePaddingTrailingOffset: CGFloat = 25
+        static let playImagePaddingLeadingOffset: CGFloat = 50
+        
+        static let forwardImageWigthtOffset: CGFloat = 45
+        static let forwardImageHeightOffset: CGFloat = 45
+        
+        static let dividerXOffset: CGFloat = 0
+        static let dividerYOffset: CGFloat = 34
+        static let dividerWidthOffset: CGFloat = 450
     }
 }
