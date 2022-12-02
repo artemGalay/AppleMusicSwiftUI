@@ -32,7 +32,7 @@ struct StartView: View {
                 Image(systemName: "square.stack.fill")
                 Text("Медиатека")
             }
-            Text("Radio")
+            RadioView()
                 .tabItem {
                     Image(systemName: "dot.radiowaves.left.and.right")
                     Text("Радио")
