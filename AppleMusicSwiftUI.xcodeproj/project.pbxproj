@@ -17,6 +17,8 @@
 		D9772CCB293129C900E3E4E9 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9772CCA293129C900E3E4E9 /* ListModel.swift */; };
 		D9772CCD29312D2000E3E4E9 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9772CCC29312D2000E3E4E9 /* ListCell.swift */; };
 		D9D131112939D4F90000D569 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D131102939D4F90000D569 /* RadioView.swift */; };
+		D9D131132939EADD0000D569 /* FavouriteRadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D131122939EADD0000D569 /* FavouriteRadioView.swift */; };
+		D9D13116293A823F0000D569 /* FavouriteRadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D13115293A823F0000D569 /* FavouriteRadioModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		D9772CCA293129C900E3E4E9 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		D9772CCC29312D2000E3E4E9 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		D9D131102939D4F90000D569 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
+		D9D131122939EADD0000D569 /* FavouriteRadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRadioView.swift; sourceTree = "<group>"; };
+		D9D13115293A823F0000D569 /* FavouriteRadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRadioModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		D9772CD0293233FF00E3E4E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D9D13114293A820D0000D569 /* RadioModel */,
 				D9772CD22932344100E3E4E9 /* ListModel */,
 			);
 			path = Model;
@@ -161,8 +166,17 @@
 			isa = PBXGroup;
 			children = (
 				D9D131102939D4F90000D569 /* RadioView.swift */,
+				D9D131122939EADD0000D569 /* FavouriteRadioView.swift */,
 			);
 			path = RadioModule;
+			sourceTree = "<group>";
+		};
+		D9D13114293A820D0000D569 /* RadioModel */ = {
+			isa = PBXGroup;
+			children = (
+				D9D13115293A823F0000D569 /* FavouriteRadioModel.swift */,
+			);
+			path = RadioModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9772CCD29312D2000E3E4E9 /* ListCell.swift in Sources */,
+				D9D13116293A823F0000D569 /* FavouriteRadioModel.swift in Sources */,
+				D9D131132939EADD0000D569 /* FavouriteRadioView.swift in Sources */,
 				D9772CC7293087BE00E3E4E9 /* StartView.swift in Sources */,
 				D9772CC5293036F600E3E4E9 /* ListView.swift in Sources */,
 				D9772CC32930167100E3E4E9 /* LibraryView.swift in Sources */,
