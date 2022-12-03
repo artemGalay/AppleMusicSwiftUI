@@ -19,6 +19,7 @@
 		D9D131112939D4F90000D569 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D131102939D4F90000D569 /* RadioView.swift */; };
 		D9D131132939EADD0000D569 /* FavouriteRadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D131122939EADD0000D569 /* FavouriteRadioView.swift */; };
 		D9D13116293A823F0000D569 /* FavouriteRadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D13115293A823F0000D569 /* FavouriteRadioModel.swift */; };
+		D9D13118293B6DA00000D569 /* AllRadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D13117293B6DA00000D569 /* AllRadioView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		D9D131102939D4F90000D569 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
 		D9D131122939EADD0000D569 /* FavouriteRadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRadioView.swift; sourceTree = "<group>"; };
 		D9D13115293A823F0000D569 /* FavouriteRadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRadioModel.swift; sourceTree = "<group>"; };
+		D9D13117293B6DA00000D569 /* AllRadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRadioView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				D9D131102939D4F90000D569 /* RadioView.swift */,
 				D9D131122939EADD0000D569 /* FavouriteRadioView.swift */,
+				D9D13117293B6DA00000D569 /* AllRadioView.swift */,
 			);
 			path = RadioModule;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				D9772CCD29312D2000E3E4E9 /* ListCell.swift in Sources */,
 				D9D13116293A823F0000D569 /* FavouriteRadioModel.swift in Sources */,
 				D9D131132939EADD0000D569 /* FavouriteRadioView.swift in Sources */,
+				D9D13118293B6DA00000D569 /* AllRadioView.swift in Sources */,
 				D9772CC7293087BE00E3E4E9 /* StartView.swift in Sources */,
 				D9772CC5293036F600E3E4E9 /* ListView.swift in Sources */,
 				D9772CC32930167100E3E4E9 /* LibraryView.swift in Sources */,
