@@ -10,7 +10,7 @@ import SwiftUI
 struct RadioView: View {
 
     let rows = [
-        GridItem(.fixed(250))
+        GridItem(.flexible())
     ]
 
     let colomns = [
@@ -21,11 +21,8 @@ struct RadioView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHGrid(rows: rows) {
-                        ForEach(0..<50) { index in
-                            Rectangle()
-                                .foregroundColor(.black)
-                                .frame(width: 350)
-                                .cornerRadius(5)
+                        ForEach(FavouriteRadioModel.favouriteRadio, id:\.self) {
+                            FavouriteRadioView(model: $0)
                                 .padding(.leading, 10)
                         }
                     }
