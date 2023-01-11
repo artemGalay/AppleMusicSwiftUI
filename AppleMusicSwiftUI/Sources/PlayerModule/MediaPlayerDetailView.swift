@@ -2,18 +2,18 @@
 //  MediaPlayerDetailView.swift
 //  AppleMusicSwiftUI
 //
-//  Created by Артем Галай on 11.01.23.
+//  Created by Elena Noack on 12.09.22.
 //
 
 import SwiftUI
 
 struct MediaPlayerDetailView: View {
-
+    
     @Environment(\.dismiss) private var dismiss
     @State var track: AlbumDataModel
     @State var isPlaying = false
     let gradient = Gradient(colors: [.black, Color ("darkGray"), .gray])
-
+    
     var body: some View {
         ZStack {
             Rectangle()

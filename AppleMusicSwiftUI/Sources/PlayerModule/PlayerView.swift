@@ -2,48 +2,60 @@
 //  PlayerView.swift
 //  AppleMusicSwiftUI
 //
-//  Created by Артем Галай on 25.11.22.
+//  Created by Elena Noack on 27.08.22.
 //
 
 import SwiftUI
 
 struct PlayerView: View {
+    
+    @State private var isShowingDetailsPlayer = false
+    @State private var track = AlbumDataModel.mocks.randomElement()
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
-        ZStack {
-            Rectangle()
-                .foregroundColor(Color.init(uiColor: .systemGray6))
-                .frame(width: Metrics.rectangleWigthOffset,
-                       height: Metrics.rectangleHeightOffset)
-            HStack {
-                Image("song")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: Metrics.songImageWigthHeightOffset,
-                           height: Metrics.songImageWigthHeightOffset)
-                    .background(Color.init(uiColor: .systemGray5))
-                    .clipShape(RoundedRectangle(cornerRadius: Metrics.songImageCornerRadiusOffset))
-                    .shadow(radius: Metrics.songImageCornerRadiusOffset)
-                Text("Не исполняется")
-                    .font(.body)
-                    .padding(.leading,
-                             Metrics.textPaddingLeadingOffset)
-                Image(systemName: "play.fill")
-                    .resizable()
-                    .frame(width: Metrics.playImageWigthHeightOffset,
-                           height: Metrics.playImageWigthHeightOffset)
-                    .padding(.trailing, Metrics.playImagePaddingTrailingOffset)
-                    .padding(.leading, Metrics.playImagePaddingLeadingOffset)
-                Image(systemName: "forward.fill")
-                    .resizable()
-                    .frame(width: Metrics.forwardImageWigthtOffset,
-                           height: Metrics.forwardImageHeightOffset)
-            } .overlay(
-                VStack{
-                    Divider()
-                        .offset(x: Metrics.dividerXOffset,
-                                y: Metrics.dividerYOffset)
-                        .frame(width: Metrics.dividerWidthOffset)
-                })
+        VStack {
+            Spacer()
+            HStack(spacing: 16) {
+                HStack {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color ("playerColor"))
+                            .frame(width: 60, height: 60)
+                            .cornerRadius(9)
+                            .shadow(radius: 6)
+                            .padding()
+                        Image("\(track?.image ?? "music.note")")
+                            .resizable()
+                            .frame(width: 60, height: 60)
+                            .cornerRadius(9)
+                            .shadow(radius: 6)
+                            .scaledToFit()
+                            .foregroundColor(Color.gray)
+                    }
+                    Text(track?.song ?? "Не исполняется").foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                    Spacer()
+                    Button(action: {}) {
+                        Image(systemName: "play.fill")
+                            .font(.title3)
+                            .foregroundColor(colorScheme == .dark ? (Color ("grayBackground")) : Color.black)
+                    }.buttonStyle(PlainButtonStyle())
+                    Button(action: {}) {
+                        Image(systemName: "forward.fill")
+                            .font(.title3)
+                            .foregroundColor(colorScheme == .dark ? (Color ("grayBackground")) : Color.black)
+                    }.buttonStyle(PlainButtonStyle())
+                        .padding()
+                }
+                .background(colorScheme == .light ? (Color ("grayBackground")) : (Color ("grayDarkMode")))
+            }
+            .overlay(Divider(), alignment: .bottom)
+        }
+        .onTapGesture {
+            isShowingDetailsPlayer.toggle()
+        }
+        .fullScreenCover(isPresented: $isShowingDetailsPlayer) {
+            MediaPlayerDetailView(track: track ?? AlbumDataModel(author: "Леша Свик",song: "Танцевали до утра",image: "svik", duration: 186.0))
         }
     }
 }
@@ -51,29 +63,5 @@ struct PlayerView: View {
 struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {
         PlayerView()
-    }
-}
-
-private extension PlayerView {
-    
-    struct Metrics {
-        static let rectangleWigthOffset: CGFloat = 450
-        static let rectangleHeightOffset: CGFloat = 70
-        
-        static let songImageWigthHeightOffset: CGFloat = 60
-        static let songImageCornerRadiusOffset: CGFloat = 10
-        
-        static let textPaddingLeadingOffset: CGFloat = 10
-        
-        static let playImageWigthHeightOffset: CGFloat = 25
-        static let playImagePaddingTrailingOffset: CGFloat = 25
-        static let playImagePaddingLeadingOffset: CGFloat = 50
-        
-        static let forwardImageWigthtOffset: CGFloat = 45
-        static let forwardImageHeightOffset: CGFloat = 45
-        
-        static let dividerXOffset: CGFloat = 0
-        static let dividerYOffset: CGFloat = 34
-        static let dividerWidthOffset: CGFloat = 450
     }
 }
