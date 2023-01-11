@@ -2,59 +2,41 @@
 //  RadioView.swift
 //  AppleMusicSwiftUI
 //
-//  Created by Артем Галай on 2.12.22.
+//  Created by Elena Noack on 02.09.22.
 //
 
 import SwiftUI
 
 struct RadioView: View {
     
-    let rows = [
-        GridItem(.flexible())
-    ]
-    
-    let colomns = [
-        GridItem(.flexible())
-    ]
+    @EnvironmentObject var modelData: ModelData
+    let rows = [GridItem(.flexible())]
     
     var body: some View {
-        NavigationView {
-            ScrollView(.vertical, showsIndicators: false) {
+        ZStack {
+            ScrollView(.vertical, showsIndicators: true) {
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHGrid(rows: rows) {
-                        ForEach(FavouriteRadioModel.favouriteRadio.reversed(), id:\.self) {
-                            FavouriteRadioView(model: $0)
-                                .padding(.leading, Metrics.paddingLeading)
+                        ForEach(modelData.radio) { radio in
+                            RadioSectionView(radio: radio)
                         }
+                        .frame(width: UIScreen.main.bounds.width - 16)
+                        .padding(.horizontal, 8)
                     }
                 }
-                VStack(alignment: .leading) {
-                    Text("Станции")
-                        .bold()
-                        .font(.title)
-                        .padding(.leading, Metrics.paddingLeading)
-                    LazyVGrid(columns: colomns) {
-                        ForEach(FavouriteRadioModel.favouriteRadio, id:\.self) {
-                            AllRadioView(model: $0)
-                                .padding(.leading, Metrics.paddingLeading)
-                        }
-                    }
-                }
+                StationView()
+                    .padding(.horizontal, 8)
             }
-            .navigationTitle("Радио")
+            PlayerView()
         }
+        .navigationTitle("Радио")
+        .navigationViewStyle(.stack)
     }
 }
 
 struct RadioView_Previews: PreviewProvider {
     static var previews: some View {
         RadioView()
-    }
-}
-
-private extension RadioView {
-    
-    struct Metrics {
-        static let paddingLeading: CGFloat = 10
+            .environmentObject(ModelData())
     }
 }
