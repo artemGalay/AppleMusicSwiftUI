@@ -25,6 +25,7 @@
 		D9ACAB99296EBDCD0000805F /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB94296EBDCD0000805F /* TimeView.swift */; };
 		D9ACAB9A296EBDCD0000805F /* BottomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB95296EBDCD0000805F /* BottomButtonsView.swift */; };
 		D9ACAB9C296EBE7C0000805F /* AlbumDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ACAB9B296EBE7C0000805F /* AlbumDataModel.swift */; };
+		D9ACAB9E296EC11A0000805F /* SearchModule in Resources */ = {isa = PBXBuildFile; fileRef = D9ACAB9D296EC11A0000805F /* SearchModule */; };
 		D9D131112939D4F90000D569 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D131102939D4F90000D569 /* RadioView.swift */; };
 		D9D131132939EADD0000D569 /* FavouriteRadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D131122939EADD0000D569 /* FavouriteRadioView.swift */; };
 		D9D13116293A823F0000D569 /* FavouriteRadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D13115293A823F0000D569 /* FavouriteRadioModel.swift */; };
@@ -51,6 +52,7 @@
 		D9ACAB94296EBDCD0000805F /* TimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 		D9ACAB95296EBDCD0000805F /* BottomButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomButtonsView.swift; sourceTree = "<group>"; };
 		D9ACAB9B296EBE7C0000805F /* AlbumDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDataModel.swift; sourceTree = "<group>"; };
+		D9ACAB9D296EC11A0000805F /* SearchModule */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SearchModule; sourceTree = "<group>"; };
 		D9D131102939D4F90000D569 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
 		D9D131122939EADD0000D569 /* FavouriteRadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRadioView.swift; sourceTree = "<group>"; };
 		D9D13115293A823F0000D569 /* FavouriteRadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRadioModel.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				D9772CD42932351200E3E4E9 /* LibraryModule */,
 				D9772CD52932352000E3E4E9 /* ListModule */,
 				D9772CD62932353600E3E4E9 /* PlayerModule */,
+				D9ACAB9D296EC11A0000805F /* SearchModule */,
 				D9D1310F2939D4CF0000D569 /* RadioModule */,
 			);
 			path = Sources;
@@ -277,6 +280,7 @@
 			files = (
 				D9772CBC2930149800E3E4E9 /* Preview Assets.xcassets in Resources */,
 				D9772CB92930149800E3E4E9 /* Assets.xcassets in Resources */,
+				D9ACAB9E296EC11A0000805F /* SearchModule in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
